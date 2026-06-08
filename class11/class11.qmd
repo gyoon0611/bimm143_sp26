@@ -1,0 +1,21 @@
+---
+title: "Class 11: Protein Structure Prediction with AlphaFold"
+author: "Julianne Lee (PID: A17979401)"
+format: pdf
+toc: true
+---
+
+```{r}
+library(bio3d)
+
+pdb <- read.pdb("hivpr_dimer_23119/hivpr_dimer_23119_unrelaxed_rank_001_alphafold2_multimer_v3_model_4_seed_000.pdb")
+
+pdb
+```
+
+Make a vector of input PDB file names that we can read into R
+
+```{r}
+pdbfiles <- list.files("hivpr_dimer_23119/", pattern=".pdb", full.names=TRUE)
+```
+

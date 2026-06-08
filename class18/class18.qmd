@@ -1,0 +1,416 @@
+---
+title: "Class 18: Pertussis and the CMI-PB project"
+author: "Julianne Lee (PID: A17979401)"
+format: pdf
+toc: true
+---
+
+## Investigating pertussis cases by year
+
+```{r}
+library(datapasta)
+library(tibble)
+library(ggplot2)
+```
+
+```{r}
+cdc <- tribble(
+  ~Year, ~Number.of.Reported.Pertussis.Cases,  ~Data.Status,
+  1922L,                              107473,   "Finalized",
+  1923L,                              164191,   "Finalized",
+  1924L,                              165418,   "Finalized",
+  1925L,                              152003,   "Finalized",
+  1926L,                              202210,   "Finalized",
+  1927L,                              181411,   "Finalized",
+  1928L,                              161799,   "Finalized",
+  1929L,                              197371,   "Finalized",
+  1930L,                              166914,   "Finalized",
+  1931L,                              172559,   "Finalized",
+  1932L,                              215343,   "Finalized",
+  1933L,                              179135,   "Finalized",
+  1934L,                              265269,   "Finalized",
+  1935L,                              180518,   "Finalized",
+  1936L,                              147237,   "Finalized",
+  1937L,                              214652,   "Finalized",
+  1938L,                              227319,   "Finalized",
+  1939L,                              103188,   "Finalized",
+  1940L,                              183866,   "Finalized",
+  1941L,                              222202,   "Finalized",
+  1942L,                              191383,   "Finalized",
+  1943L,                              191890,   "Finalized",
+  1944L,                              109873,   "Finalized",
+  1945L,                              133792,   "Finalized",
+  1946L,                              109860,   "Finalized",
+  1947L,                              156517,   "Finalized",
+  1948L,                               74715,   "Finalized",
+  1949L,                               69479,   "Finalized",
+  1950L,                              120718,   "Finalized",
+  1951L,                               68687,   "Finalized",
+  1952L,                               45030,   "Finalized",
+  1953L,                               37129,   "Finalized",
+  1954L,                               60886,   "Finalized",
+  1955L,                               62786,   "Finalized",
+  1956L,                               31732,   "Finalized",
+  1957L,                               28295,   "Finalized",
+  1958L,                               32148,   "Finalized",
+  1959L,                               40005,   "Finalized",
+  1960L,                               14809,   "Finalized",
+  1961L,                               11468,   "Finalized",
+  1962L,                               17749,   "Finalized",
+  1963L,                               17135,   "Finalized",
+  1964L,                               13005,   "Finalized",
+  1965L,                                6799,   "Finalized",
+  1966L,                                7717,   "Finalized",
+  1967L,                                9718,   "Finalized",
+  1968L,                                4810,   "Finalized",
+  1969L,                                3285,   "Finalized",
+  1970L,                                4249,   "Finalized",
+  1971L,                                3036,   "Finalized",
+  1972L,                                3287,   "Finalized",
+  1973L,                                1759,   "Finalized",
+  1974L,                                2402,   "Finalized",
+  1975L,                                1738,   "Finalized",
+  1976L,                                1010,   "Finalized",
+  1977L,                                2177,   "Finalized",
+  1978L,                                2063,   "Finalized",
+  1979L,                                1623,   "Finalized",
+  1980L,                                1730,   "Finalized",
+  1981L,                                1248,   "Finalized",
+  1982L,                                1895,   "Finalized",
+  1983L,                                2463,   "Finalized",
+  1984L,                                2276,   "Finalized",
+  1985L,                                3589,   "Finalized",
+  1986L,                                4195,   "Finalized",
+  1987L,                                2823,   "Finalized",
+  1988L,                                3450,   "Finalized",
+  1989L,                                4157,   "Finalized",
+  1990L,                                4570,   "Finalized",
+  1991L,                                2719,   "Finalized",
+  1992L,                                4083,   "Finalized",
+  1993L,                                6586,   "Finalized",
+  1994L,                                4617,   "Finalized",
+  1995L,                                5137,   "Finalized",
+  1996L,                                7796,   "Finalized",
+  1997L,                                6564,   "Finalized",
+  1998L,                                7405,   "Finalized",
+  1999L,                                7298,   "Finalized",
+  2000L,                                7867,   "Finalized",
+  2001L,                                7580,   "Finalized",
+  2002L,                                9771,   "Finalized",
+  2003L,                               11647,   "Finalized",
+  2004L,                               25827,   "Finalized",
+  2005L,                               25616,   "Finalized",
+  2006L,                               15632,   "Finalized",
+  2007L,                               10454,   "Finalized",
+  2008L,                               13278,   "Finalized",
+  2009L,                               16858,   "Finalized",
+  2010L,                               27550,   "Finalized",
+  2011L,                               18719,   "Finalized",
+  2012L,                               48277,   "Finalized",
+  2013L,                               28639,   "Finalized",
+  2014L,                               32971,   "Finalized",
+  2015L,                               20762,   "Finalized",
+  2016L,                               17972,   "Finalized",
+  2017L,                               18975,   "Finalized",
+  2018L,                               15609,   "Finalized",
+  2019L,                               18617,   "Finalized",
+  2020L,                                6124,   "Finalized",
+  2021L,                                2116,   "Finalized",
+  2022L,                                3044,   "Finalized",
+  2023L,                                7063,   "Finalized",
+  2024L,                               43321, "Provisional",
+  2025L,                               28783, "Provisional"
+  )
+
+```
+
+```{r}
+colnames(cdc)
+head(cdc)
+```
+
+```{r}
+ggplot(cdc) +
+  aes(x = Year, y = Number.of.Reported.Pertussis.Cases) +
+  geom_point() +
+  geom_line() +
+  labs(
+    title = "Pertussis Cases by Year",
+    x = "Year",
+    y = "Number of cases"
+  )
+```
+
+
+## A tale of two vaccines (wP & aP)
+
+> Q2. Using the ggplot geom_vline() function add lines to your previous plot for the 1946 introduction of the wP vaccine and the 1996 switch to aP vaccine (see example in the hint below). What do you notice?
+
+```{r}
+ggplot(cdc) +
+  aes(x = Year, y = Number.of.Reported.Pertussis.Cases) +
+  geom_point() +
+  geom_line() +
+  geom_vline(xintercept = 1946, linetype = "dashed", color = "blue") +
+  geom_vline(xintercept = 1996, linetype = "dashed", color = "red") +
+  annotate("text", x = 1947, y = 260000, label = "wP", color = "blue", hjust = 0) +
+  annotate("text", x = 1997, y = 260000, label = "aP", color = "red", hjust = 0) +
+  labs(
+    title = "Pertussis Cases by Year",
+    x = "Year",
+    y = "Number of cases"
+  )
+```
+
+> > Pertussis cases dropped sharply after the introduction of wP vaccine and slightly rised again after the introduction of aP
+
+> Q3. Describe what happened after the introduction of the aP vaccine? Do you have a possible explanation for the observed trend?
+ 
+> > After the introduction of the aP vaccine, there was slight increase in petussis cases compared to wP vaccine, while this still wasn't significantly high. The possible explanation is specificity of aP vaccine and shorter lasting protection
+
+
+## Exploring CMI-PB data
+
+```{r}
+library(jsonlite)
+
+subject <- read_json("https://www.cmi-pb.org/api/subject", simplifyVector = TRUE) 
+
+head(subject, 3)
+```
+
+> Q4. How many aP and wP infancy vaccinated subjects are in the dataset?
+
+```{r}
+table(subject$infancy_vac)
+```
+
+> Q5. How many Male and Female subjects/patients are in the dataset?
+
+```{r}
+table(subject$biological_sex)
+```
+
+> Q6. What is the breakdown of race and biological sex (e.g. number of Asian females, White males etc…)?
+
+```{r}
+table(subject$biological_sex, subject$race) 
+```
+
+```{r}
+library(lubridate)
+
+today()
+```
+
+```{r}
+today() - ymd("2000-01-01")
+```
+
+```{r}
+time_length( today() - ymd("2000-01-01"),  "years")
+```
+
+> Q7. Using this approach determine (i) the average age of wP individuals, (ii) the average age of aP individuals; and (iii) are they significantly different?
+
+```{r}
+library(lubridate)
+library(dplyr)
+
+subject$age <- today() - ymd(subject$year_of_birth)
+```
+
+```{r}
+ap <- subject %>% filter(infancy_vac == "aP")
+round( summary( time_length( ap$age, "years" ) ) )
+
+wp <- subject %>% filter(infancy_vac == "wP")
+round( summary( time_length( wp$age, "years" ) ) )
+```
+
+```{r}
+t.test(time_length(age, "years") ~ infancy_vac, data = subject)
+```
+
+> Q8. Determine the age of all individuals at time of boost?
+
+```{r}
+int <- ymd(subject$date_of_boost) - ymd(subject$year_of_birth)
+age_at_boost <- time_length(int, "year")
+head(age_at_boost)
+```
+
+> Q9. With the help of a faceted boxplot or histogram (see below), do you think these two groups are significantly different?
+
+```{r}
+ggplot(subject) +
+  aes(time_length(age, "year"),
+      fill=as.factor(infancy_vac)) +
+  geom_histogram(show.legend=FALSE) +
+  facet_wrap(vars(infancy_vac), nrow=2) +
+  xlab("Age in years")
+```
+
+```{r}
+x <- t.test(time_length( wp$age, "years" ),
+       time_length( ap$age, "years" ))
+
+x$p.value
+```
+
+```{r}
+specimen <- read_json(
+  "https://www.cmi-pb.org/api/specimen",
+  simplifyVector = TRUE
+)
+
+titer <- read_json(
+  "https://www.cmi-pb.org/api/plasma_ab_titer",
+  simplifyVector = TRUE
+)
+```
+
+> Q9. Complete the code to join specimen and subject tables to make a new merged data frame containing all specimen records along with their associated subject details:
+
+```{r}
+meta <- inner_join(specimen, subject, by = "subject_id")
+
+dim(meta)
+head(meta)
+```
+
+> Q10. Now using the same procedure join meta with titer data so we can further analyze this data in terms of time of visit aP/wP, male/female etc.
+
+```{r}
+abdata <- inner_join(titer, meta, by = "specimen_id")
+
+dim(abdata)
+head(abdata)
+```
+
+> Q11. How many specimens (i.e. entries in abdata) do we have for each isotype?
+
+```{r}
+table(abdata$isotype)
+```
+
+> Q12. What are the different $dataset values in abdata and what do you notice about the number of rows for the most “recent” dataset?
+
+```{r}
+table(abdata$dataset)
+```
+
+> > The most recent dataset has the fewest rows (newer dataset may have fewer available antibody titer measurements)
+
+
+## Examine IgG Ab titer levels
+
+```{r}
+igg <- abdata %>% filter(isotype == "IgG")
+head(igg)
+```
+
+> Q13. Complete the following code to make a summary boxplot of Ab titer levels (MFI) for all antigens:
+
+```{r}
+ggplot(igg) +
+  aes(x = MFI_normalised, y = antigen) +
+  geom_boxplot() +
+  xlim(0, 75) +
+  facet_wrap(vars(visit), nrow = 2)
+```
+
+> Q14. What antigens show differences in the level of IgG antibody titers recognizing them over time? Why these and not others?
+>
+> > PT, FIM2/3, and FHA show clear differences in the level of IgG antibody titers recognizing them over time. These likey change because they are pertussis-related vaccine antigen. others, especially OVA, do not changes becuase they are not pertussis vaccine.
+
+```{r}
+ggplot(igg) +
+  aes(MFI_normalised, antigen, col=infancy_vac ) +
+  geom_boxplot(show.legend = FALSE) + 
+  facet_wrap(vars(visit), nrow=2) +
+  xlim(0,75) +
+  theme_bw()
+```
+
+```{r}
+igg %>% filter(visit != 8) %>%
+ggplot() +
+  aes(MFI_normalised, antigen, col=infancy_vac ) +
+  geom_boxplot(show.legend = FALSE) + 
+  xlim(0,75) +
+  facet_wrap(vars(infancy_vac, visit), nrow=2)
+```
+
+> Q15. Filter to pull out only two specific antigens for analysis and create a boxplot for each. You can chose any you like. Below I picked a “control” antigen (“OVA”, that is not in our vaccines) and a clear antigen of interest (“PT”, Pertussis Toxin, one of the key virulence factors produced by the bacterium B. pertussis).
+
+```{r}
+filter(igg, antigen == "OVA") %>%
+  ggplot() +
+  aes(x = MFI_normalised, col = infancy_vac) +
+  geom_boxplot(show.legend = FALSE) +
+  facet_wrap(vars(visit)) +
+  theme_bw()
+```
+
+```{r}
+filter(igg, antigen == "FIM2/3") %>%
+  ggplot() +
+  aes(x = MFI_normalised, col = infancy_vac) +
+  geom_boxplot(show.legend = FALSE) +
+  facet_wrap(vars(visit)) +
+  theme_bw()
+```
+
+```{r}
+abdata.21 <- abdata %>% filter(dataset == "2021_dataset")
+
+abdata.21 %>% 
+  filter(isotype == "IgG",  antigen == "PT") %>%
+  ggplot() +
+    aes(x=planned_day_relative_to_boost,
+        y=MFI_normalised,
+        col=infancy_vac,
+        group=subject_id) +
+    geom_point() +
+    geom_line() +
+    geom_vline(xintercept=0, linetype="dashed") +
+    geom_vline(xintercept=14, linetype="dashed") +
+  labs(title="2021 dataset IgG PT",
+       subtitle = "Dashed lines indicate day 0 (pre-boost) and 14 (apparent peak levels)")
+```
+
+## Obtaining CMI-PB RNASeq data
+
+```{r}
+url <- "https://www.cmi-pb.org/api/v2/rnaseq?versioned_ensembl_gene_id=eq.ENSG00000211896.7"
+
+rna <- read_json(url, simplifyVector = TRUE) 
+```
+
+```{r}
+ssrna <- inner_join(rna, meta)
+```
+
+```{r}
+ggplot(ssrna) +
+  aes(x = visit, y = tpm, group = subject_id) +
+  geom_point() +
+  geom_line(alpha = 0.2)
+```
+
+```{r}
+ggplot(ssrna) +
+  aes(tpm, col=infancy_vac) +
+  geom_boxplot() +
+  facet_wrap(vars(visit))
+```
+
+```{r}
+ssrna %>%  
+  filter(visit==4) %>% 
+  ggplot() +
+    aes(tpm, col=infancy_vac) + geom_density() + 
+    geom_rug() 
+```
+
