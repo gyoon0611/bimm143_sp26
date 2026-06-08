@@ -2,11 +2,6 @@
 bimm143 at UC San Diego github
 
 ## class reports
-# BIMM143 SP26
-
-My class portfolio for BIMM143 at UC San Diego.
-
-## Class Reports
 - [Class 04](class04/class04.html)
 - [Class 05](class05/class05.html)
 - [Class 06](class06/class06.html)
@@ -18,7 +13,4 @@ My class portfolio for BIMM143 at UC San Diego.
 - [Class 12](class12/hw12.html)
 - [Class 13](class13/class13.html)
 - [Class 14](class14/class14.html)
-- [Class 15](class15/class15.html)
-- [Class 16](class16/class16.html)
-- [Class 17](class17/class17.html)
 - [Class 18](class18/class18.html)
