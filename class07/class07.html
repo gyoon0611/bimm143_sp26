@@ -144,83 +144,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">3</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">3</span>))</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -2.9680747 -2.5419829 -1.7887060 -4.4186465 -1.2117198 -2.5364511
- [7] -2.6632624 -1.9606143 -1.3162811 -3.4943264 -3.4444539 -0.5148164
-[13] -1.6725464 -2.2125975 -3.3742455 -3.2362009 -2.3275735 -4.3869867
-[19] -4.0405222 -4.1249224 -3.0340126 -5.5762612 -4.1369309 -3.0346987
-[25] -2.9906699 -4.0185205 -2.9588362 -3.9651524 -2.6181779 -3.4697633
-[31]  2.8170851  4.7493044  2.6227714  3.6541984  2.3573497  1.9828402
-[37]  4.9136530  3.9297691  2.5294066  3.0007652  4.4115678  1.1980020
-[43]  2.2491968  3.2133101  1.0878098  1.7569002  3.2125898  3.1696310
-[49]  1.1360927  2.6914033  3.7257600  2.4896095  4.3096740  3.2806909
-[55]  2.2737571  2.9891730  1.9335431  3.1509220  3.2756476  1.5897608</code></pre>
+<pre><code> [1] -4.87636692 -3.91432398 -2.38569228 -2.95097114 -2.26857890 -4.05842429
+ [7] -5.82991315 -3.46326388 -4.53616498 -3.59655894  0.01815274 -2.73059011
+[13] -2.70930840 -1.89047289 -2.66931657 -2.43394859 -3.31066454 -2.34385137
+[19] -1.96364132 -1.58143914 -4.09421740 -4.21334989 -3.70796459 -1.93430961
+[25] -3.38660004 -3.67592309 -1.97055249 -3.52911913 -2.52187262 -2.30961238
+[31]  1.77933444  4.07280928  1.46974356  4.41145315  3.63198467  2.70529623
+[37]  2.37442015  2.88500377  1.85721374  5.52790430  2.44095694  1.77028096
+[43]  3.62385678  3.20240384  2.49482536  2.22580654  3.94696632  3.62271609
+[49]  3.88073206  1.52412597  2.29521466  2.03021238  3.59050708  3.29442748
+[55]  3.81158578  2.59654427  2.53204684  3.16495217  3.25867078  4.22651978</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">cbind</span>(x, <span class="fu">rev</span>(x))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>               x           
- [1,] -2.9680747  1.5897608
- [2,] -2.5419829  3.2756476
- [3,] -1.7887060  3.1509220
- [4,] -4.4186465  1.9335431
- [5,] -1.2117198  2.9891730
- [6,] -2.5364511  2.2737571
- [7,] -2.6632624  3.2806909
- [8,] -1.9606143  4.3096740
- [9,] -1.3162811  2.4896095
-[10,] -3.4943264  3.7257600
-[11,] -3.4444539  2.6914033
-[12,] -0.5148164  1.1360927
-[13,] -1.6725464  3.1696310
-[14,] -2.2125975  3.2125898
-[15,] -3.3742455  1.7569002
-[16,] -3.2362009  1.0878098
-[17,] -2.3275735  3.2133101
-[18,] -4.3869867  2.2491968
-[19,] -4.0405222  1.1980020
-[20,] -4.1249224  4.4115678
-[21,] -3.0340126  3.0007652
-[22,] -5.5762612  2.5294066
-[23,] -4.1369309  3.9297691
-[24,] -3.0346987  4.9136530
-[25,] -2.9906699  1.9828402
-[26,] -4.0185205  2.3573497
-[27,] -2.9588362  3.6541984
-[28,] -3.9651524  2.6227714
-[29,] -2.6181779  4.7493044
-[30,] -3.4697633  2.8170851
-[31,]  2.8170851 -3.4697633
-[32,]  4.7493044 -2.6181779
-[33,]  2.6227714 -3.9651524
-[34,]  3.6541984 -2.9588362
-[35,]  2.3573497 -4.0185205
-[36,]  1.9828402 -2.9906699
-[37,]  4.9136530 -3.0346987
-[38,]  3.9297691 -4.1369309
-[39,]  2.5294066 -5.5762612
-[40,]  3.0007652 -3.0340126
-[41,]  4.4115678 -4.1249224
-[42,]  1.1980020 -4.0405222
-[43,]  2.2491968 -4.3869867
-[44,]  3.2133101 -2.3275735
-[45,]  1.0878098 -3.2362009
-[46,]  1.7569002 -3.3742455
-[47,]  3.2125898 -2.2125975
-[48,]  3.1696310 -1.6725464
-[49,]  1.1360927 -0.5148164
-[50,]  2.6914033 -3.4444539
-[51,]  3.7257600 -3.4943264
-[52,]  2.4896095 -1.3162811
-[53,]  4.3096740 -1.9606143
-[54,]  3.2806909 -2.6632624
-[55,]  2.2737571 -2.5364511
-[56,]  2.9891730 -1.2117198
-[57,]  1.9335431 -4.4186465
-[58,]  3.1509220 -1.7887060
-[59,]  3.2756476 -2.5419829
-[60,]  1.5897608 -2.9680747</code></pre>
+<pre><code>                x            
+ [1,] -4.87636692  4.22651978
+ [2,] -3.91432398  3.25867078
+ [3,] -2.38569228  3.16495217
+ [4,] -2.95097114  2.53204684
+ [5,] -2.26857890  2.59654427
+ [6,] -4.05842429  3.81158578
+ [7,] -5.82991315  3.29442748
+ [8,] -3.46326388  3.59050708
+ [9,] -4.53616498  2.03021238
+[10,] -3.59655894  2.29521466
+[11,]  0.01815274  1.52412597
+[12,] -2.73059011  3.88073206
+[13,] -2.70930840  3.62271609
+[14,] -1.89047289  3.94696632
+[15,] -2.66931657  2.22580654
+[16,] -2.43394859  2.49482536
+[17,] -3.31066454  3.20240384
+[18,] -2.34385137  3.62385678
+[19,] -1.96364132  1.77028096
+[20,] -1.58143914  2.44095694
+[21,] -4.09421740  5.52790430
+[22,] -4.21334989  1.85721374
+[23,] -3.70796459  2.88500377
+[24,] -1.93430961  2.37442015
+[25,] -3.38660004  2.70529623
+[26,] -3.67592309  3.63198467
+[27,] -1.97055249  4.41145315
+[28,] -3.52911913  1.46974356
+[29,] -2.52187262  4.07280928
+[30,] -2.30961238  1.77933444
+[31,]  1.77933444 -2.30961238
+[32,]  4.07280928 -2.52187262
+[33,]  1.46974356 -3.52911913
+[34,]  4.41145315 -1.97055249
+[35,]  3.63198467 -3.67592309
+[36,]  2.70529623 -3.38660004
+[37,]  2.37442015 -1.93430961
+[38,]  2.88500377 -3.70796459
+[39,]  1.85721374 -4.21334989
+[40,]  5.52790430 -4.09421740
+[41,]  2.44095694 -1.58143914
+[42,]  1.77028096 -1.96364132
+[43,]  3.62385678 -2.34385137
+[44,]  3.20240384 -3.31066454
+[45,]  2.49482536 -2.43394859
+[46,]  2.22580654 -2.66931657
+[47,]  3.94696632 -1.89047289
+[48,]  3.62271609 -2.70930840
+[49,]  3.88073206 -2.73059011
+[50,]  1.52412597  0.01815274
+[51,]  2.29521466 -3.59655894
+[52,]  2.03021238 -4.53616498
+[53,]  3.59050708 -3.46326388
+[54,]  3.29442748 -5.82991315
+[55,]  3.81158578 -4.05842429
+[56,]  2.59654427 -2.26857890
+[57,]  2.53204684 -2.95097114
+[58,]  3.16495217 -2.38569228
+[59,]  3.25867078 -3.91432398
+[60,]  4.22651978 -4.87636692</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -254,16 +254,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 Cluster means:
           x          
-1  2.856739 -3.001265
-2 -3.001265  2.856739
+1  3.008284 -3.027962
+2 -3.027962  3.008284
 
 Clustering vector:
  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1
 [39] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
 Within cluster sum of squares by cluster:
-[1] 65.5927 65.5927
- (between_SS / total_SS =  88.7 %)
+[1] 66.22454 66.22454
+ (between_SS / total_SS =  89.2 %)
 
 Available components:
 
@@ -279,16 +279,16 @@ Available components:
 
 Cluster means:
           x          
-1  2.856739 -3.001265
-2 -3.001265  2.856739
+1  3.008284 -3.027962
+2 -3.027962  3.008284
 
 Clustering vector:
  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1
 [39] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
 Within cluster sum of squares by cluster:
-[1] 65.5927 65.5927
- (between_SS / total_SS =  88.7 %)
+[1] 66.22454 66.22454
+ (between_SS / total_SS =  89.2 %)
 
 Available components:
 
@@ -323,8 +323,8 @@ $class
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>km<span class="sc">$</span>centers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          x          
-1  2.856739 -3.001265
-2 -3.001265  2.856739</code></pre>
+1  3.008284 -3.027962
+2 -3.027962  3.008284</code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -351,22 +351,22 @@ $class
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>km2 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(z, <span class="at">centers=</span><span class="dv">4</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>km2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>K-means clustering with 4 clusters of sizes 15, 30, 6, 9
+<pre><code>K-means clustering with 4 clusters of sizes 30, 10, 12, 8
 
 Cluster means:
           x          
-1  3.254601 -2.159485
-2 -3.001265  2.856739
-3  1.591476 -3.504727
-4  3.037146 -4.068591
+1  3.008284 -3.027962
+2 -2.162278  2.120809
+3 -4.047460  3.065753
+4 -2.580820  4.031424
 
 Clustering vector:
- [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 1 4 1 4 3 1 4
-[39] 4 1 4 3 4 1 3 3 1 1 1 4 4 1 1 1 1 1 3 1 1 3
+ [1] 3 3 4 2 2 3 3 3 3 3 2 4 4 4 2 2 3 4 2 2 4 3 3 2 3 3 4 2 4 2 1 1 1 1 1 1 1 1
+[39] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 
 Within cluster sum of squares by cluster:
-[1] 20.133996 65.592703  2.469753  8.313875
- (between_SS / total_SS =  91.7 %)
+[1] 66.224542  9.769828 11.822975  6.775377
+ (between_SS / total_SS =  92.3 %)
 
 Available components:
 
@@ -446,8 +446,8 @@ Number of objects: 60 </code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cutree</span>(hc, <span class="at">k=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3 4 3 4 4 3 3
-[39] 4 3 3 4 4 3 4 4 3 3 2 3 3 3 3 3 4 3 4 3 3 4</code></pre>
+<pre><code> [1] 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3
+[39] 3 4 3 3 3 3 3 3 3 3 3 2 3 3 3 4 3 3 3 3 3 4</code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -711,11 +711,14 @@ $class
 [1] "prcomp"</code></pre>
 </div>
 </div>
-<p>The main result figure from this analysis is called a “PC score plot” or “ordenation plot” “PC plot” or “PC1 vs PC2 plot”.</p>
+<p>The main result figure from this analysis is called a <strong>“PC score plot”</strong> (a.k.a. an “ordination plot” “PC plot” or “PC1 vs PC2 plot”).</p>
+<p>This plot shows how samples (in this case countries) relate to each other along our new PC axis.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pca<span class="sc">$</span>x) <span class="sc">+</span></span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> PC1, <span class="at">y =</span> PC2) <span class="sc">+</span></span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>mycols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"orange"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"darkgreen"</span>)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pca<span class="sc">$</span>x) <span class="sc">+</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> PC1, <span class="at">y =</span> PC2) <span class="sc">+</span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">col=</span>mycols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -730,6 +733,57 @@ England   -144.99315   -2.532999 105.768945 -9.152022e-15
 Wales     -240.52915 -224.646925 -56.475555  5.560040e-13
 Scotland   -91.86934  286.081786 -44.415495 -6.638419e-13
 N.Ireland  477.39164  -58.901862  -4.877895  1.329771e-13</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pca<span class="sc">$</span>x) <span class="sc">+</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> PC1, <span class="at">y =</span> PC2, <span class="at">label=</span><span class="fu">row.names</span>(pca<span class="sc">$</span>x)) <span class="sc">+</span></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">col=</span>mycols) <span class="sc">+</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">size=</span><span class="dv">3</span>, <span class="at">vjust=</span><span class="dv">2</span>, <span class="at">col=</span>mycols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="class07_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>pca<span class="sc">$</span>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                 PC1         PC2        PC3           PC4
+England   -144.99315   -2.532999 105.768945 -9.152022e-15
+Wales     -240.52915 -224.646925 -56.475555  5.560040e-13
+Scotland   -91.86934  286.081786 -44.415495 -6.638419e-13
+N.Ireland  477.39164  -58.901862  -4.877895  1.329771e-13</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pca<span class="sc">$</span>rotation) <span class="sc">+</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(PC1, <span class="fu">reorder</span>(<span class="fu">row.names</span>(pca<span class="sc">$</span>rotation), PC1))<span class="sc">+</span></span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="class07_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Q9. Generate a similar ‘loadings plot’ for PC2. What two food groups feature prominantely and what does PC2 maninly tell us about?</p>
+<blockquote class="blockquote">
+<p>Soft drinks and alcoholic drinks are prominant. PC2 mainly tells about a beverage consumption among countries in how much they consume the soft drinks and alcoholic drinks relative to the other foods.</p>
+</blockquote>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pca<span class="sc">$</span>rotation) <span class="sc">+</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(PC2, <span class="fu">reorder</span>(<span class="fu">row.names</span>(pca<span class="sc">$</span>rotation), PC2))<span class="sc">+</span></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="class07_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>

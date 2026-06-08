@@ -1,7 +1,7 @@
 ---
 title: "Class 14: Pathway Analysis from RNA-Seq Results"
 author: "Julianne Lee (PID: A17979401)"
-format: pdf
+format: html
 toc: true
 ---
 

@@ -58,16 +58,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="class19_files/libs/clipboard/clipboard.min.js"></script>
-<script src="class19_files/libs/quarto-html/quarto.js"></script>
-<script src="class19_files/libs/quarto-html/popper.min.js"></script>
-<script src="class19_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="class19_files/libs/quarto-html/anchor.min.js"></script>
-<link href="class19_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="class19_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="class19_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="class19_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="class19_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="class18_files/libs/clipboard/clipboard.min.js"></script>
+<script src="class18_files/libs/quarto-html/quarto.js"></script>
+<script src="class18_files/libs/quarto-html/popper.min.js"></script>
+<script src="class18_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="class18_files/libs/quarto-html/anchor.min.js"></script>
+<link href="class18_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="class18_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="class18_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="class18_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="class18_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -263,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -291,7 +291,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -384,19 +384,19 @@ Attaching package: 'lubridate'</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-05-31"</code></pre>
+<pre><code>[1] "2026-06-08"</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>() <span class="sc">-</span> <span class="fu">ymd</span>(<span class="st">"2000-01-01"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Time difference of 9647 days</code></pre>
+<pre><code>Time difference of 9655 days</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">time_length</span>( <span class="fu">today</span>() <span class="sc">-</span> <span class="fu">ymd</span>(<span class="st">"2000-01-01"</span>),  <span class="st">"years"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 26.41205</code></pre>
+<pre><code>[1] 26.43395</code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -448,7 +448,7 @@ alternative hypothesis: true difference in means between group aP and group wP i
  -10.094058  -7.407351
 sample estimates:
 mean in group aP mean in group wP 
-        28.30739         37.05810 </code></pre>
+         28.3293          37.0800 </code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -478,7 +478,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -537,12 +537,12 @@ mean in group aP mean in group wP
 5 Not Hispanic or Latino White    1986-01-01    2016-09-12 2020_dataset
 6 Not Hispanic or Latino White    1986-01-01    2016-09-12 2020_dataset
          age
-1 14760 days
-2 14760 days
-3 14760 days
-4 14760 days
-5 14760 days
-6 14760 days</code></pre>
+1 14768 days
+2 14768 days
+3 14768 days
+4 14768 days
+5 14768 days
+6 14768 days</code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -586,12 +586,12 @@ mean in group aP mean in group wP
 5 Not Hispanic or Latino White    1986-01-01    2016-09-12 2020_dataset
 6 Not Hispanic or Latino White    1986-01-01    2016-09-12 2020_dataset
          age
-1 14760 days
-2 14760 days
-3 14760 days
-4 14760 days
-5 14760 days
-6 14760 days</code></pre>
+1 14768 days
+2 14768 days
+3 14768 days
+4 14768 days
+5 14768 days
+6 14768 days</code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -657,12 +657,12 @@ mean in group aP mean in group wP
 5                Unknown White    1983-01-01    2016-10-10 2020_dataset
 6                Unknown White    1983-01-01    2016-10-10 2020_dataset
          age
-1 14760 days
-2 14760 days
-3 14760 days
-4 15856 days
-5 15856 days
-6 15856 days</code></pre>
+1 14768 days
+2 14768 days
+3 14768 days
+4 15864 days
+5 15864 days
+6 15864 days</code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -681,7 +681,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -689,7 +689,7 @@ mean in group aP mean in group wP
 <blockquote class="blockquote">
 <p>Q14. What antigens show differences in the level of IgG antibody titers recognizing them over time? Why these and not others?</p>
 <blockquote class="blockquote">
-
+<p>PT, FIM2/3, and FHA show clear differences in the level of IgG antibody titers recognizing them over time. These likey change because they are pertussis-related vaccine antigen. others, especially OVA, do not changes becuase they are not pertussis vaccine.</p>
 </blockquote>
 </blockquote>
 <div class="cell">
@@ -706,7 +706,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -725,7 +725,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -743,7 +743,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -758,7 +758,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -782,7 +782,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -809,7 +809,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -822,7 +822,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -836,7 +836,7 @@ mean in group aP mean in group wP
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="class19_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="class18_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>

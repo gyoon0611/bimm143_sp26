@@ -72,10 +72,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#differential-expression-analysis" id="toc-differential-expression-analysis" class="nav-link active" data-scroll-target="#differential-expression-analysis">Differential Expression Analysis</a></li>
+  <li><a href="#running-deseq2" id="toc-running-deseq2" class="nav-link" data-scroll-target="#running-deseq2">Running DESeq2</a></li>
+  <li><a href="#pathway-analysis" id="toc-pathway-analysis" class="nav-link" data-scroll-target="#pathway-analysis">Pathway Analysis</a>
+  <ul class="collapse">
+  <li><a href="#top-down-regulated-kegg-pathway-figures" id="toc-top-down-regulated-kegg-pathway-figures" class="nav-link" data-scroll-target="#top-down-regulated-kegg-pathway-figures">Top down-regulated KEGG pathway figures</a></li>
+  </ul></li>
+  <li><a href="#gene-ontology-go" id="toc-gene-ontology-go" class="nav-link" data-scroll-target="#gene-ontology-go">Gene Ontology (GO)</a></li>
+  <li><a href="#reactome-analysis" id="toc-reactome-analysis" class="nav-link" data-scroll-target="#reactome-analysis">Reactome Analysis</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -586,7 +601,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa04110.pathview.png</code></pre>
@@ -606,7 +621,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 [2,] "9"  "306"</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa04110.pathview.pdf</code></pre>
@@ -627,7 +642,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa04640.pathview.png</code></pre>
@@ -636,7 +651,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa04630.pathview.png</code></pre>
@@ -645,7 +660,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa00140.pathview.png</code></pre>
@@ -654,7 +669,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa04142.pathview.png</code></pre>
@@ -663,12 +678,33 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa04330.pathview.png</code></pre>
 </div>
 </div>
+<section id="top-down-regulated-kegg-pathway-figures" class="level3">
+<h3 class="anchored" data-anchor-id="top-down-regulated-kegg-pathway-figures">Top down-regulated KEGG pathway figures</h3>
+<section id="cell-cycle" class="level4">
+<h4 class="anchored" data-anchor-id="cell-cycle">Cell cycle</h4>
+<p><img src="hsa04110.pathview.png" class="img-fluid"></p>
+</section>
+<section id="dna-replication" class="level4">
+<h4 class="anchored" data-anchor-id="dna-replication">DNA replication</h4>
+<p><img src="hsa03030.pathview.png" class="img-fluid"></p>
+</section>
+<section id="rna-transport" class="level4">
+<h4 class="anchored" data-anchor-id="rna-transport">RNA transport</h4>
+<p><img src="hsa03013.pathview.png" class="img-fluid"></p>
+</section>
+<section id="homologous-recombination" class="level4">
+<h4 class="anchored" data-anchor-id="homologous-recombination">Homologous recombination</h4>
+<p><img src="hsa03440.pathview.png" class="img-fluid"></p>
+</section>
+<section id="oocyte-meiosis" class="level4">
+<h4 class="anchored" data-anchor-id="oocyte-meiosis">Oocyte meiosis</h4>
+<p><img src="hsa04114.pathview.png" class="img-fluid"></p>
 <blockquote class="blockquote">
 <p>Q. Can you do the same procedure as above to plot the pathview figures for the top 5 down-regulated pathways?</p>
 </blockquote>
@@ -688,7 +724,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa04110.pathview.png</code></pre>
@@ -697,7 +733,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa03030.pathview.png</code></pre>
@@ -706,7 +742,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa03013.pathview.png</code></pre>
@@ -715,7 +751,7 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa03440.pathview.png</code></pre>
@@ -724,12 +760,14 @@ hsa00010 Glycolysis / Gluconeogenesis 0.212222694       53 8.961413e-03</code></
 <pre><code>'select()' returned 1:1 mapping between keys and columns</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/class14</code></pre>
+<pre><code>Info: Working in directory /Users/g_yn_00/Desktop/UCSD/2025-26/BIMM 143/bimm143_sp26/class14</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Info: Writing image file hsa04114.pathview.png</code></pre>
 </div>
 </div>
+</section>
+</section>
 </section>
 <section id="gene-ontology-go" class="level2">
 <h2 class="anchored" data-anchor-id="gene-ontology-go">Gene Ontology (GO)</h2>
